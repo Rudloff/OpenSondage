@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Studs 0.6.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-02-23 16:15+0100\n"
-"PO-Revision-Date: 2013-01-20 23:59+0100\n"
+"PO-Revision-Date: 2013-01-21 01:03+0100\n"
 "Last-Translator: Pierre Rudloff <rudloff@strasweb.fr>\n"
 "Language-Team: Guilhem Borghesi, Raphaël Droz\n"
 "Language: \n"
@@ -327,7 +327,7 @@ msgstr "Merci de votre confiance."
 #: adminstuds.php:270
 #: adminstuds.php:314
 msgid "Make your polls"
-msgstr "Se Trouver &agrave; l'Universit&eacute; de Strasbourg"
+msgstr "Créez vos sondages"
 
 #: studs.php:179
 #: adminstuds.php:884
