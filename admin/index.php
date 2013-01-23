@@ -139,5 +139,5 @@ echo '</body>'."\n";
 echo '</html>'."\n";
 
 // si on annule la suppression, rafraichissement de la page
-if ($_POST["annulesuppression"]) {
+if (isset($_POST["annulesuppression"])) {
 }
