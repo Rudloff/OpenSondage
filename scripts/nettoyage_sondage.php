@@ -54,6 +54,6 @@ while ($dsondage=$sondage->FetchNextObject(false)) {
                       'LEFT INNER JOIN comments ON comments.id_sondage = sondage.id_sondage ' .
                       "WHERE id_sondage = '$dsondage->id_sondage' ");
     // ecriture des traces dans le fichier de logs
-    error_log($date . " SUPPRESSION: $dsondage->id_sondage\t$dsondage->format\t$dsondage->nom_admin\t$dsondage->mail_admin\n", '../admin/logs_studs.txt');
+    error_log($date . " SUPPRESSION: $dsondage->id_sondage\t$dsondage->format\t$dsondage->nom_admin\t$dsondage->mail_admin\n", 3, '../admin/logs_studs.txt');
   }
 }

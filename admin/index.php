@@ -71,7 +71,7 @@ echo '<form action="index.php" method="POST">'."\n";
 // Test et affichage du bouton de confirmation en cas de suppression de sondage
 $i=0;
 while($dsondage = $sondage->FetchNextObject(false)) {
-  if ($_POST["supprimersondage$i"]) {
+  if (isset($_POST["supprimersondage$i"])) {
     echo '<table>'."\n";
     echo '<tr><td bgcolor="#EE0000" colspan="11">'. _("Confirm removal of the poll ") .'"'.$dsondage->id_sondage.'" : <input type="submit" name="confirmesuppression'.$i.'" value="'. _("Remove this poll!") .'">'."\n";
     echo '<input type="submit" name="annullesuppression" value="'. _("Keep this poll!") .'"></td></tr>'."\n";
@@ -80,7 +80,7 @@ while($dsondage = $sondage->FetchNextObject(false)) {
   }
   
   // Traitement de la confirmation de suppression
-  if ($_POST["confirmesuppression$i"]) {
+  if (isset($_POST["confirmesuppression$i"])) {
     $date=date('H:i:s d/m/Y');
     
     // requetes SQL qui font le ménage dans la base
