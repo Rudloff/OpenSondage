@@ -96,7 +96,7 @@ while($dsondage = $sondage->FetchNextObject(false)) {
   $i++;
 }
 
-$sondage=$connect->Execute("select * from sondage");
+$sondage=$connect->Execute("SELECT * FROM sondage ORDER BY date_fin DESC");
 $nbsondages=$sondage->RecordCount();
 
 echo $nbsondages.' '. _("polls in the database at this time") .'<br><br>'."\n";
