@@ -57,7 +57,8 @@ function connexion_base()
 function get_server_name()
 {
   $scheme = (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") ? 'https' : 'http';
-  $url = sprintf("%s://%s%s", $scheme, STUDS_URL, dirname($_SERVER["SCRIPT_NAME"]));
+  $dir=basename(dirname($_SERVER['SCRIPT_NAME']))=='admin'?dirname(dirname($_SERVER["SCRIPT_NAME"])):dirname($_SERVER["SCRIPT_NAME"]);
+  $url = sprintf("%s://%s%s", $scheme, STUDS_URL, $dir);
   
   if (!preg_match("|/$|", $url)) {
     $url = $url."/";
